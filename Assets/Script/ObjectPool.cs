@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPool : MonoBehaviour
+public class ObjectPool : MonoSingleton<ObjectPool>
 {
     public PooledObject[] objectsToPool;
-    
+
     [Serializable]
     public struct PooledObject
     {
@@ -13,7 +13,7 @@ public class ObjectPool : MonoBehaviour
         public GameObject gameObject;
         public int initialCount;
     }
-    
+
     private Dictionary<string, Queue<GameObject>> objectPoolInStock;
 
     private void Start()
@@ -37,12 +37,12 @@ public class ObjectPool : MonoBehaviour
             {
                 var obj = Instantiate(pooledObject.gameObject, transform);
                 obj.SetActive(false);
-                
+
                 objectPoolInStock[pooledObject.id].Enqueue(obj);
             }
         }
     }
-    
+
     public GameObject GetObject(string id)
     {
         if (objectPoolInStock.ContainsKey(id) && objectPoolInStock[id].Count > 0)
@@ -51,14 +51,14 @@ public class ObjectPool : MonoBehaviour
             obj.SetActive(true);
             return obj;
         }
-        
+
         // If no objects are available, log a warning and return null
         var pooledObject = Array.Find(objectsToPool, o => o.id == id);
         var outPut = Instantiate(pooledObject.gameObject, transform);
         outPut.SetActive(true);
         return outPut;
     }
-    
+
     public void ReturnObject(string id, GameObject obj)
     {
         if (objectPoolInStock.ContainsKey(id))

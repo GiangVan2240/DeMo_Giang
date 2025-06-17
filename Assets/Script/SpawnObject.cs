@@ -2,14 +2,22 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class SpawnObject : MonoBehaviour
+public class SpawnObject : MonoSingleton<SpawnObject>
 {
-    [SerializeField] private ObjectPool objectPool;
-    [SerializeField] private string pooledObjectId;
+    private string pooledObjectId;
+
+    private ObjectPool objectPool;
 
     private float currentX = 0;
+
+    void Start()
+    {
+        objectPool = ObjectPool.Instance;
+    }
+
     public void Spawn(string pooledObjectId)
     {
+        this.pooledObjectId = pooledObjectId;
         var go = objectPool.GetObject(pooledObjectId);
         if (go != null)
         {
@@ -24,12 +32,12 @@ public class SpawnObject : MonoBehaviour
             Debug.LogWarning($"No object found with ID: {pooledObjectId}");
         }
     }
-    
+
     private IEnumerator ReturnObject(GameObject go)
     {
         yield return new WaitForSeconds(1f);
         objectPool.ReturnObject(pooledObjectId, go);
-        currentX = 0; 
+        currentX = 0;
     }
 
     private void OnGUI()
