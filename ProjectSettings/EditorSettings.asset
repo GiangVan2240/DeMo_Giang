@@ -9,8 +9,8 @@ EditorSettings:
   m_DefaultBehaviorMode: 0
   m_PrefabRegularEnvironment: {fileID: 0}
   m_PrefabUIEnvironment: {fileID: 0}
-  m_SpritePackerMode: 0
-  m_SpritePackerCacheSize: 10
+  m_SpritePackerMode: 3
+  m_SpritePackerCacheSize: 25
   m_SpritePackerPaddingPower: 1
   m_Bc7TextureCompressor: 0
   m_EtcTextureCompressorBehavior: 1
@@ -35,7 +35,7 @@ EditorSettings:
   m_DisableCookiesInLightmapper: 0
   m_AssetPipelineMode: 1
   m_RefreshImportMode: 0
-  m_CacheServerMode: 0
+  m_CacheServerMode: 2
   m_CacheServerEndpoint: 
   m_CacheServerNamespacePrefix: default
   m_CacheServerEnableDownload: 1

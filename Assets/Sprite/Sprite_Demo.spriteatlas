@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sprite_Demo
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: -1064357458, guid: f4b5dc294cf121c48a4ac0d8e528378c, type: 3}
+    - {fileID: 110310171, guid: f4b5dc294cf121c48a4ac0d8e528378c, type: 3}
+    - {fileID: 589874061, guid: f4b5dc294cf121c48a4ac0d8e528378c, type: 3}
+    - {fileID: -1989091529, guid: a38036fed33e7fc45ba138740cd9adf6, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - f4b5dc294cf121c48a4ac0d8e528378c: 589874061
+    - f4b5dc294cf121c48a4ac0d8e528378c: 110310171
+    - f4b5dc294cf121c48a4ac0d8e528378c: -1064357458
+    - a38036fed33e7fc45ba138740cd9adf6: -1989091529
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 589874061, guid: f4b5dc294cf121c48a4ac0d8e528378c, type: 3}
+  - {fileID: 110310171, guid: f4b5dc294cf121c48a4ac0d8e528378c, type: 3}
+  - {fileID: -1064357458, guid: f4b5dc294cf121c48a4ac0d8e528378c, type: 3}
+  - {fileID: -1989091529, guid: a38036fed33e7fc45ba138740cd9adf6, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - "\u2014Pngtree\u2014game ui interface buttons game_2428684_2"
+  - "\u2014Pngtree\u2014game ui interface buttons game_2428684_3"
+  - "\u2014Pngtree\u2014game ui interface buttons game_2428684_4"
+  - "\u2014Pngtree\u2014simple button game_13457234_0"
+  m_RenderDataMap: {}
+  m_Tag: Sprite_Demo
+  m_IsVariant: 0
